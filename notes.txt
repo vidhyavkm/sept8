@@ -1,0 +1,49 @@
+Javascript is a synchronous function=> line by line execution.
+this is time consuming, memory waste
+
+advance JS:
+to make sync functions into async function
+callback: it is a function which takes one or more function as a parameter.
+settimeout is an example of callbackfunction
+
+settimeout=> it is an async function
+it takes function as a parameter
+as well as the amount of time need to block the code.
+
+why callback? => nodejs backend
+to avoid time consuming and memory waste.
+
+callstack=>  realtime use => DS & Algo
+
+it is a place in a browser where it keeps track of the functions(all codes) 
+that has to be called in the program.it will executed whatever the staements inside
+it and if it has any callback function inside it ,it sends it to webapi's.
+
+web api=>
+
+it is the place where the async operations(callback functions) are
+actually executed. it receives those call back fucntions from callstack.
+
+callbackqueue=> 
+
+queue is a datastructure , First come first serve.
+it stores the async function which has to be executed at next.
+it receives already executed callback functions from webapi's
+
+eventloop=>
+
+it coordinates between callback queue and callstack, it checks 
+whetehr call stack is empty or not .if it is empty, it will push the functions 
+to the call stack.
+
+javascript always give preference to first come first. prefer who takes less time.
+
+Pain of callback or disadvantages:
+
+callback hell=> 
+
+function inside a function, more than many fucntions are executed
+in a same program, JS get stucked and it got confused then thrpws error
+,so callback is not suits for all the web api's to retrive the dta.
+
+
